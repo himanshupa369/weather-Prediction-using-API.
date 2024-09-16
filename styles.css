@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #000428, #004e92);
+    background-size: 200% 200%;
+    animation: gradientAnimation 15s ease infinite;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    transition: background-image 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    background-blend-mode: overlay;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Slightly darker background */
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Deeper shadow for more depth */
+    margin-top: 100px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.05); /* Slightly larger scaling on hover */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6); /* More pronounced shadow on hover */
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #00eaff;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* More depth when focused */
+    transform: scale(1.02);
+}
+
+button {
+    background-color: #00c6ff;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #007bff;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05); /* Slight scaling on hover */
+}
+
+.weather-info {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.weather-info:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Lighten the background on hover */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
+}
+
+.weather-info p, .weather-info h2 {
+    margin: 10px 0;
+    font-size: 20px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.weather-info img {
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.6));
+}
+
+#toggleUnit {
+    margin-top: 10px;
+    background-color: #f05454;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#toggleUnit:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+#hourly-forecast {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.forecast-item {
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.forecast-item:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin-top: 50px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    input[type="text"], button {
+        font-size: 14px;
+    }
+
+    .weather-info p, .weather-info h2 {
+        font-size: 16px;
+    }
+
+    .forecast-item {
+        width: 50px;
+        padding: 5px;
+    }
+}
